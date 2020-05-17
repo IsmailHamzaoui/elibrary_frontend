@@ -1,0 +1,44 @@
+.Exercises{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Exercises h1{
+    font-family: The bold font;
+    letter-spacing: 50px;
+    animation-name: anime1, anime2;
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(.97,.07,.85,.54);
+}
+@keyframes anime1 {
+    0% {
+        color: tomato;
+    }
+    50% {
+        color: #f7f7f7;
+    }
+    100% {
+        color: #100303;
+    }
+}
+@keyframes anime2 {
+    0% {
+        letter-spacing: 250px;
+    }
+
+    100% {
+        letter-spacing: 50px;
+    }
+}
+
+.Exercises .search{
+    display: flex;
+    margin: 50px 0;
+    border-radius: 6px;
+    border: 1px solid;
+    width: 40%;
+    padding-bottom: 30px;
+    padding-left: 10px;
+}

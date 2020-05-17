@@ -1,0 +1,15 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 300%;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: darkslategray;
+}
+
+.footer h1 {
+    color: #f7f7f7;
+}

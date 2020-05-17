@@ -1,0 +1,25 @@
+.Field{
+    width: 25%;
+}
+
+
+.Field .available{
+    display: inline-block;
+    margin-left: 100%;
+    font-family: Mont-HeavyDEMO;
+    color: chocolate;
+}
+.Field .taken{
+    display: inline-block;
+    margin-left: 100%;
+    font-family: Mont-HeavyDEMO;
+    color: #6f0902;
+}
+
+.Field .default{
+    display: inline-block;
+    font-family: The bold font;
+}
+.Field span{
+    margin-right: 10px;
+}

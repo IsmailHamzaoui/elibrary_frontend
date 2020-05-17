@@ -1,0 +1,9 @@
+.home{
+    position: relative;
+    top: 60px;
+    left: 23%;
+    width: 80%;
+    height: 1000px;
+    display: flex;
+    margin: 30px;
+}
