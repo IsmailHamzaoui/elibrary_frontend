@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import style from './Navbar.module.css';
 import {Button, Modal} from "@material-ui/core";
 import ModalForm from "../utils/modal/ModalForm";
+import SignUp from "../signup/SignUp";
 
 const Navbar = (props) => {
 
@@ -31,7 +32,7 @@ const Navbar = (props) => {
             </div>
             {
                 show && (
-                    <ModalForm closing={closing} />
+                    <SignUp closing={closing} />
                 )
             }
 

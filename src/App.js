@@ -1,19 +1,34 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './App.module.css';
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/footer/Footer";
-import Books from "./components/features/books/Books";
-import Exercises from "./components/features/exercises/Exercises";
-import Exams from "./components/features/exams/Exams";
-import Thesises from "./components/features/thesis/Thesises";
 import { BrowserRouter, Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import SignUp from "./components/signup/SignUp";
 
 function App() {
 
-    const [authenticated, setauthenticated] = useState(false);
+    const [authenticated, setAuthenticated] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [currentUser, setCurrentUser] = useState("");
 
+
+    const loadCurrentlyLoggedInUser = () => {
+        setLoading(true);
+        setAuthenticated(true);
+        setCurrentUser("user1");
+    }
+
+    useEffect(() => {
+        loadCurrentlyLoggedInUser();
+    }, [])
+
+    const handleLogout = () => {
+        setAuthenticated(false);
+        setCurrentUser(null);
+        console.log("logout is great");
+    }
 
 
   return (
@@ -23,12 +38,6 @@ function App() {
             <Home homeText="" />
             <Sidebar text="" />
             <Footer text="" />
-            <switch>
-                <Route path="/signup"
-                       render={(props) => <Signup authenticated={authenticated} {...props} />}></Route>
-                <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>
-                <Route component={NotFound}></Route>
-            </switch>
         </BrowserRouter>
     </div>
   );

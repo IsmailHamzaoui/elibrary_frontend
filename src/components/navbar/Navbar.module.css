@@ -59,13 +59,13 @@ ul{
     margin-left: 28%;
 
 }
-.account .signup{
+.account .signUp{
     border: 0.5px solid rgba(139, 131, 137, 0.5);
     color: #100303;
     margin-right: 25px;
 
 }
-.account .signup:hover{
+.account .signUp:hover{
     background-color: #95389e;
     color: #f7f7f7;
 
